@@ -107,12 +107,13 @@
     "react-dom": ">=18.0.0",
     "tailwindcss": ">=3.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/ruixen-ui"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/ruixen-ui/issues"
-  },
-  "homepage": "https://github.com/yourusername/ruixen-ui#readme"
+"repository": {
+  "type": "git",
+  "url": "https://github.com/ruixenui/npm_package_ruixen_ui"
+},
+"bugs": {
+  "url": "https://github.com/ruixenui/npm_package_ruixen_ui/issues"
+},
+"homepage": "https://github.com/ruixenui/npm_package_ruixen_ui#readme"
+
 }

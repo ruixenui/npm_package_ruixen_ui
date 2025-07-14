@@ -1,6 +1,6 @@
 {
   "name": "ruixen-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "High-level component library built on top of shadcn/ui with Tailwind CSS and TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

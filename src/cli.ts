@@ -3,8 +3,16 @@
 const { Command } = require('commander');
 const { init } = require('./commands/init');
 const { addComponent } = require('./commands/add-component');
-const chalk = require('chalk');
 const { list } = require('./commands/list');
+
+// Simple logging functions with ANSI colors
+const error = (message: string): void => {
+  console.error(`\x1b[31mError: ${message}\x1b[0m`);
+};
+
+const success = (message: string): void => {
+  console.log(`\x1b[32m${message}\x1b[0m`);
+};
 
 const program = new Command();
 
@@ -38,13 +46,15 @@ program
         // Add all components
         await addComponent(undefined, { all: true });
       } else {
-        // Add specific components
+        console.log('\x1b[33mNo components found to add. Please specify components to add or use --all to add all components\x1b[0m');
         for (const component of components) {
           await addComponent(component);
         }
       }
-    } catch (error) {
-      console.error(chalk.red('Error:'), error instanceof Error ? error.message : error);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'An unknown error occurred';
+      error(message);
+      console.error(`\x1b[31mError: ${message}\x1b[0m`);
       process.exit(1);
     }
   });
@@ -55,9 +65,9 @@ program
   .action(async () => {
     try {
       await list();
-    } catch (error: unknown) {
-      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
-      console.error(chalk.red('Error:'), errorMessage);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'An unknown error occurred';
+      error(message);
       process.exit(1);
     }
   });

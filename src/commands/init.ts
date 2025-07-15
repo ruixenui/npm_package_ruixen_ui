@@ -42,7 +42,7 @@ export async function init(options: InitOptions = {}) {
     // Create ruixen-ui config
     const configPath = path.join(cwd, 'ruixen-ui.json');
     const config = {
-      $schema: "https://ruixen-ui.com/schema.json",
+      $schema: "https://ruixen.com/schema.json",
       style: "default",
       rsc: true,
       tsx: !options.javascript,

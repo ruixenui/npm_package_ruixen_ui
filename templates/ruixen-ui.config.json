@@ -1,5 +1,5 @@
 {
-  "$schema": "https://ruixen-ui.com/schema.json",
+  "$schema": "https://ruixen.com/schema.json",
   "style": "default",
   "rsc": true,
   "tsx": true,

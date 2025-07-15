@@ -2,16 +2,6 @@
 
 A high-level component library built on top of shadcn/ui with Tailwind CSS and TypeScript, designed for Next.js applications.
 
-## Features
-
-- 🎨 **Beautiful Components**: Pre-built, customizable components with modern design
-- 🔧 **CLI Tools**: Easy installation and component management
-- 🚀 **Next.js Optimized**: Built specifically for Next.js applications
-- 📱 **Responsive**: All components are mobile-first and responsive
-- 🎯 **TypeScript**: Full TypeScript support with type safety
-- 🎨 **Tailwind CSS**: Fully customizable with Tailwind CSS
-- 🔒 **Accessible**: Built with accessibility in mind
-
 ## Installation
 
 ### Quick Start
@@ -35,17 +25,6 @@ npx ruixen-ui@latest add --all
 ```bash
 npm install ruixen-ui
 ```
-
-## Available Components
-
-### Core Components
-
-- **Button** - Enhanced button with loading states and variants
-- **Button_01** - Slide to delete button with drag interaction
-- **Card** - Flexible card component with header, content, and footer
-- **Form** - Form builder with validation and error handling
-- **DataTable** - Advanced data table with sorting, filtering, and pagination
-- **Dashboard** - Complete dashboard layout with sidebar and header
 
 ### Usage Example
 
@@ -103,7 +82,7 @@ After running `init`, a `ruixen-ui.json` file will be created in your project ro
 
 ```json
 {
-  "$schema": "https://ruixen-ui.com/schema.json",
+  "$schema": "https://ruixen.com/schema.json",
   "style": "default",
   "rsc": true,
   "tsx": true,
@@ -241,94 +220,12 @@ function UsersTable() {
 }
 ```
 
-### Dashboard Layout
-
-```tsx
-import { DashboardLayout, DashboardSidebar, DashboardHeader } from '@/components/ruixen/dashboard';
-import { Home, Users, Settings } from 'lucide-react';
-
-function Dashboard() {
-  const sidebarItems = [
-    { icon: Home, label: 'Dashboard', active: true },
-    { icon: Users, label: 'Users' },
-    { icon: Settings, label: 'Settings' }
-  ];
-
-  const user = {
-    name: 'John Doe',
-    email: 'john@example.com'
-  };
-
-  return (
-    <DashboardLayout
-      sidebar={<DashboardSidebar items={sidebarItems} />}
-      header={<DashboardHeader title="Dashboard" user={user} />}
-    >
-      <div className="space-y-6">
-        <h1 className="text-2xl font-bold">Welcome to your dashboard</h1>
-        {/* Your dashboard content */}
-      </div>
-    </DashboardLayout>
-  );
-}
-```
-
-## Publishing to NPM
-
-To publish this package to npm:
-
-1. **Build the package:**
-   ```bash
-   npm run build
-   ```
-
-2. **Login to npm:**
-   ```bash
-   npm login
-   ```
-
-3. **Publish:**
-   ```bash
-   npm publish
-   ```
-
-4. **For updates:**
-   ```bash
-   npm version patch  # or minor/major
-   npm publish
-   ```
-
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Build the package
-npm run build
-
-# Watch for changes
-npm run dev
-
-# Test the CLI locally
-npm link
-ruixen-ui --help
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
 ## License
 
 MIT License - see LICENSE file for details.
 
 ## Support
 
-- 📖 [Documentation](https://ruixen-ui.com)
-- 🐛 [Issue Tracker](https://github.com/yourusername/ruixen-ui/issues)
-- 💬 [Discussions](https://github.com/yourusername/ruixen-ui/discussions)
+- 📖 [Documentation](https://ruixen.com)
+- 🐛 [Issue Tracker](https://github.com/ruixen/ruixen-ui/issues)
+- 💬 [Discussions](https://github.com/ruixen/ruixen-ui/discussions)
